@@ -73,11 +73,20 @@ def diamond
 end
 
 def rectangle
+  puts "How long do you want the rectangle to be?"
   rec_length = gets.chomp.to_i
+  puts "How wide do you want the rectangle to be?"
   rec_width = gets.chomp.to_i
 
   rec_char = "#"
+  size = 1
+
+  while size <= rec_length.to_i
+    puts (rec_char * rec_width).center(100)
+    size += 1
+  end
 end
+
 #def circle
 #  puts "What radius circle do you want?"
 #  circle_radius = gets.chomp.to_i
@@ -106,7 +115,7 @@ end
 ##  end
 #end
 
-puts "What shape would you like to make? Options: pyramid"
+puts "What shape would you like to make?\nOptions:\npyramid\nsquare\ndiamond\nrectangle"
 user_input = gets.chomp
 if user_input.downcase == "pyramid"
   puts pyramid
@@ -114,4 +123,6 @@ elsif user_input.downcase == "square"
   puts square
 elsif user_input.downcase == "diamond"
   puts diamond
+elsif user_input.downcase == "rectangle"
+  puts rectangle
 end
