@@ -1,11 +1,26 @@
 puts "How large do you want your pyramid to be? Enter a number under 100."
 pyramid_size = gets.chomp.to_i
-puts "Left-justified (ljust), right-justified (rjust), or center (center)?"
+
+puts "What character would you like to use for your pyramid? The default is '#'."
+pyramid_type = gets.chomp
+if pyramid_type == ""
+  pyramid_type = "#"
+end
+
+while pyramid_type.length.to_i > 1
+  puts "Please enter a single character."
+  pyramid_type = gets.chomp
+end
+
+puts "Left-justified (ljust), right-justified (rjust), or center (center)? The default is left-justified."
 justify = gets.chomp
+if justify == "" || justify == " "
+  justify = "ljust"
+end
 
 if pyramid_size < 100
   hash_count = 1
-  hashes = "#"
+  hashes = pyramid_type
 
   while hash_count <= pyramid_size
     if justify.downcase == "ljust" || justify.downcase == "left-justified"
