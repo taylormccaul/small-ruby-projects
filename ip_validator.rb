@@ -18,6 +18,7 @@ def ip_address?(str)
 end
 
 =begin
+#Test cases
 puts ip_address?("192.168.1.5.244")
 puts ip_address?("999.999.999.999")
 puts ip_address?("255.255.255.255")
