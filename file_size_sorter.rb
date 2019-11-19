@@ -1,8 +1,6 @@
-#morse_list = []
-
 #user_input = gets.chomp
 #f = File.new(user_input.to_s, "r")
-puts File::directory?("./")
+#puts File::directory?("./")
 #content = IO.readlines(f)
 #puts content[3]
 #if f
@@ -11,7 +9,10 @@ puts File::directory?("./")
 #end
 #file_sizes = []
 #file_names = []
-Dir.foreach("./") do |file|
+puts "Specify a file path: "
+file_dir = gets.chomp
+
+Dir.foreach(file_dir) do |file|
 	next if file == "." || file == ".." || File::directory?(file) || /^\./ =~ file || /^[ntNT]/ =~ file
 	#file_size = file.size
 	#file_sizes.push(file_size)
@@ -22,3 +23,8 @@ Dir.foreach("./") do |file|
 	print file + " - "
 	puts (file.size).to_s + "B"
 end
+
+#Dir.foreach(file_dir) do |file|
+#	next if file.extname != file_dir
+#	puts file
+#end
