@@ -16,4 +16,3 @@ letters_arr.each do
 
     counter += 1
 end
-#puts "a".ord
