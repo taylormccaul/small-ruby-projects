@@ -71,14 +71,3 @@ def list_file_size
 end
 
 puts list_file_size
-
-#file_sizes = []
-#counter = 0
-#file_sizes.push((File.size(file) / 1000.00).ceil)
-#file_sizes.sort
-#counter += 1
-#if ((File.size(file) / 1000.00).ceil) == file_sizes[counter]
-#	puts "MATCH"
-#end
-#counter += 1
-#puts file_sizes
